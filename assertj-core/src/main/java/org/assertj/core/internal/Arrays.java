@@ -700,7 +700,7 @@ public class Arrays {
     try {
       List<T> arrayAsList = asList(array);
       // empty arrays are considered sorted even if comparator can't be applied to <T>.
-      if (arrayAsList.size() == 0) return;
+      if (arrayAsList.isEmpty()) return;
       if (arrayAsList.size() == 1) {
         // call compare to see if unique element is compatible with comparator.
         comparator.compare(arrayAsList.get(0), arrayAsList.get(0));
