@@ -36,11 +36,11 @@ import org.assertj.core.data.Percentage;
  */
 public abstract class Numbers<NUMBER extends Number & Comparable<NUMBER>> extends Comparables {
 
-  public Numbers() {
+  protected Numbers() {
     super();
   }
 
-  public Numbers(ComparisonStrategy comparisonStrategy) {
+  protected Numbers(ComparisonStrategy comparisonStrategy) {
     super(comparisonStrategy);
   }
 
