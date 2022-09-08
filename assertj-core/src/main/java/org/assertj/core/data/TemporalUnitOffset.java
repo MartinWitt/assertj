@@ -33,12 +33,17 @@ public abstract class TemporalUnitOffset implements TemporalOffset<Temporal> {
 
   /**
    * Creates a new temporal offset for a given temporal unit.
-   * @param value the value of the offset.
-   * @param unit temporal unit of the offset.
-   * @throws NullPointerException if the given unit is {@code null}.
-   * @throws IllegalArgumentException if the given value is negative.
+   *
+   * @param value
+   * 		the value of the offset.
+   * @param unit
+   * 		temporal unit of the offset.
+   * @throws NullPointerException
+   * 		if the given unit is {@code null}.
+   * @throws IllegalArgumentException
+   * 		if the given value is negative.
    */
-  public TemporalUnitOffset(long value, TemporalUnit unit) {
+  protected TemporalUnitOffset(long value, TemporalUnit unit) {
     requireNonNull(unit);
     checkThatValueIsPositive(value);
     this.value = value;
