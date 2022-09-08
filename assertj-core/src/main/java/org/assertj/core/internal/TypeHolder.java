@@ -41,11 +41,11 @@ abstract class TypeHolder<T> {
 
   protected final Map<Class<?>, T> typeHolder;
 
-  public TypeHolder() {
+  protected TypeHolder() {
     this(DEFAULT_CLASS_COMPARATOR);
   }
 
-  public TypeHolder(Comparator<Class<?>> comparator) {
+  protected TypeHolder(Comparator<Class<?>> comparator) {
     typeHolder = new TreeMap<>(requireNonNull(comparator, "Comparator must not be null"));
   }
 
