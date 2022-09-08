@@ -48,7 +48,7 @@ public abstract class Delta<T> {
     /** A delete from the original. */
     DELETE,
     /** An insert into the original. */
-    INSERT
+    INSERT;
   }
 
   /**
@@ -57,7 +57,7 @@ public abstract class Delta<T> {
    * @param original Chunk describing the original text. Must not be {@code null}.
    * @param revised Chunk describing the revised text. Must not be {@code null}.
    */
-  public Delta(Chunk<T> original, Chunk<T> revised) {
+  protected Delta(Chunk<T> original, Chunk<T> revised) {
     checkArgument(original != null, "original must not be null");
     checkArgument(revised != null, "revised must not be null");
     this.original = original;
