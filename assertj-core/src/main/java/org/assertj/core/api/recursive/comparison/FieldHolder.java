@@ -33,7 +33,7 @@ abstract class FieldHolder<T> {
 
   protected final Map<String, T> fieldHolder;
 
-  public FieldHolder() {
+  protected FieldHolder() {
     fieldHolder = new TreeMap<>();
   }
 
