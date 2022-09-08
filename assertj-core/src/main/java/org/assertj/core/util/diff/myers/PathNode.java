@@ -33,11 +33,15 @@ public abstract class PathNode {
 
   /**
    * Concatenates a new path node with an existing diffpath.
-   * @param i The position in the original sequence for the new node.
-   * @param j The position in the revised sequence for the new node.
-   * @param prev The previous node in the path.
+   *
+   * @param i
+   * 		The position in the original sequence for the new node.
+   * @param j
+   * 		The position in the revised sequence for the new node.
+   * @param prev
+   * 		The previous node in the path.
    */
-  public PathNode(int i, int j, PathNode prev) {
+  protected PathNode(int i, int j, PathNode prev) {
     this.i = i;
     this.j = j;
     this.prev = prev;
