@@ -124,7 +124,7 @@ public final class VerboseCondition<T> extends Condition<T> {
    * @param matches the result of the match operation
    * @return the verbose condition description.
    */
-  protected String buildVerboseDescription(T objectUnderTest, boolean matches) {
+  String buildVerboseDescription(T objectUnderTest, boolean matches) {
     StringBuilder sb = new StringBuilder(format("%s", description));
     if (!matches) sb.append(objectUnderTestDescriptor.apply(objectUnderTest));
     return sb.toString();
