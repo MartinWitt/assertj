@@ -60,7 +60,7 @@ public abstract class AbstractObjectAssert<SELF extends AbstractObjectAssert<SEL
   private Map<String, Comparator<?>> comparatorsByPropertyOrField = new TreeMap<>();
   private TypeComparators comparatorsByType;
 
-  public AbstractObjectAssert(ACTUAL actual, Class<?> selfType) {
+  protected AbstractObjectAssert(ACTUAL actual, Class<?> selfType) {
     super(actual, selfType);
   }
 
