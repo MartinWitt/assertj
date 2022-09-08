@@ -38,7 +38,7 @@ public abstract class TemporalUnitOffset implements TemporalOffset<Temporal> {
    * @throws NullPointerException if the given unit is {@code null}.
    * @throws IllegalArgumentException if the given value is negative.
    */
-  public TemporalUnitOffset(long value, TemporalUnit unit) {
+  protected TemporalUnitOffset(long value, TemporalUnit unit) {
     requireNonNull(unit);
     checkThatValueIsPositive(value);
     this.value = value;
