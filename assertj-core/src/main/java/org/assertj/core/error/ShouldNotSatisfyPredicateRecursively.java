@@ -30,7 +30,7 @@ public class ShouldNotSatisfyPredicateRecursively extends BasicErrorMessageFacto
     List<String> fieldsDescription = failedFields.stream().map(FieldLocation::getPathToUseInErrorReport).collect(toList());
     StringBuilder builder = new StringBuilder(NEW_LINE);
     builder.append("The following fields did not satisfy the predicate:").append(NEW_LINE);
-    builder.append(INDENT + fieldsDescription.toString() + NEW_LINE);
+    builder.append(INDENT + fieldsDescription + NEW_LINE);
     builder.append("The recursive assertion was performed with this configuration:").append(NEW_LINE);
     builder.append(recursiveAssertionConfiguration);
     return new ShouldNotSatisfyPredicateRecursively(builder.toString());
